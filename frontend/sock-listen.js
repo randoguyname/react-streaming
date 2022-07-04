@@ -1,4 +1,4 @@
-const ws = new WebSocket(`wss://react-streaming.herokuapp.com:8080/listen/${prompt("Enter code:")}`)
+const ws = new WebSocket(`ws://react-streaming.herokuapp.com:8080/listen/${prompt("Enter code:")}`)
 
 ws.addEventListener("message", (message)=>{
   const {type, data, ...rest} = JSON.parse(message.data);
