@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  width: 100%;
+
+  font-family: system-ui;
+}
+
+#player {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+#twitch-embed {
+  position: absolute;
+  bottom: 20vh;
+  right: 0;
+  width: 30vw;
+}
+
+#twitch-embed iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.code {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 2rem;
+  left: 1rem;
+
+  color: white;
+  filter: drop-shadow(0 0 3px #000000a0);
+}
+
+.right-button {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  
+  background: hsl(300deg, 100%, 50%);
+  
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.set-resource {
+  top: 3rem;
+}
+
+.set-host {
+  top: 8rem;
+}
+
+.return {
+  top: 13rem;
+}
+
+.right-button:active {
+  filter: brightness(0.9);
+}
