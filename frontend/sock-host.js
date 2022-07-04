@@ -1,4 +1,4 @@
-const ws = new WebSocket(`wss://react-streaming.herokuapp.com:8080/create`);
+const ws = new WebSocket(`ws://react-streaming.herokuapp.com:8080/create`);
 let code;
 ws.addEventListener("message", ({data}) => {
   code = data
