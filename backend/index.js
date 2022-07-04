@@ -95,7 +95,7 @@ wss.on("connection", (socket, request) => {
 				/**@type {{type: "pause" | "play" | "setstream", data: any, utc: number}} */
 				let data;
 				try {
-					data =  = JSON.parse(messageData.toString())
+					data = JSON.parse(messageData.toString())
 				} catch {
 					return
 				}
