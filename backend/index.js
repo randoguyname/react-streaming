@@ -1,6 +1,14 @@
 const { WebSocketServer } = require("ws");
 const { randomBytes } = require("crypto");
 
+const express = require("express");
+
+const app = express();
+
+app.use(express.static(__dirname + "frontend"));
+
+const server = app.listen(80);
+
 const wss = new WebSocketServer({
 	port: 8080,
 });
