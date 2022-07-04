@@ -7,10 +7,10 @@ const app = express();
 
 app.use(express.static("frontend"));
 
-const server = app.listen(process.env.PORT);
+const server = app.listen(process.env.PORT ?? 80);
 
 const wss = new WebSocketServer({
-	port: 8080,
+	port: process.env.PORT ?? 8080,
 });
 
 class Stream {
