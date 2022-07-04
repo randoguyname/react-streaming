@@ -93,7 +93,12 @@ wss.on("connection", (socket, request) => {
 			socket.on("message", (messageData, isBinary) => {
 				if (isBinary) return;
 				/**@type {{type: "pause" | "play" | "setstream", data: any, utc: number}} */
-				const data = JSON.parse(messageData.toString());
+				let data;
+				try {
+					data =  = JSON.parse(messageData.toString())
+				} catch {
+					return
+				}
 				switch (data.type) {
 					case "pause":
 						newParty.timestamp = data.data.timestamp;
