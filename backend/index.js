@@ -1,9 +1,15 @@
-const { WebSocketServer } = require("ws");
+const { Server } = require("ws");
 const { randomBytes } = require("crypto");
+const { createServer } = require("http");
 
-const wss = new WebSocketServer({
-	port: process.env.PORT ?? 8080,
+const server = createServer();
+const app = require("static.js");
+
+const wss = new Server({
+	server,
 });
+
+server.on("request", app);
 
 class Stream {
 	/**
@@ -149,4 +155,4 @@ wss.on("connection", (socket, request) => {
 	}
 });
 
-console.log("hi");
+server.listen(process.env.PORT ?? 8080, ()=>{});
