@@ -1,0 +1,15 @@
+{
+	"name": "ytstreambackend",
+	"version": "1.0.0",
+	"description": "Backend for a proposed twitch-youtube stream integration for react content",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"crypto": "^1.0.1",
+		"ws": "^8.8.0"
+	}
+}
