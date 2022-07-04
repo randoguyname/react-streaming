@@ -4,7 +4,7 @@
 	"description": "Backend for a proposed twitch-youtube stream integration for react content",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node backend/index.js"
 	},
 	"author": "",
 	"license": "ISC",
