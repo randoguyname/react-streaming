@@ -5,7 +5,7 @@ const express = require("express");
 
 const app = express();
 
-app.use(express.static(__dirname + "frontend"));
+app.use(express.static("frontend"));
 
 const server = app.listen(process.env.PORT);
 
