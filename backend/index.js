@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.static(__dirname + "frontend"));
 
-const server = app.listen(80);
+const server = app.listen(process.env.PORT);
 
 const wss = new WebSocketServer({
 	port: 8080,
