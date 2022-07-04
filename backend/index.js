@@ -3,7 +3,7 @@ const { randomBytes } = require("crypto");
 const { createServer } = require("http");
 
 const server = createServer();
-const app = require("static.js");
+const app = require("./static.js");
 
 const wss = new Server({
 	server,
